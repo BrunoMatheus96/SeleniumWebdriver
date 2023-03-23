@@ -46,13 +46,9 @@ public class LoginPage extends RunCucumber {
         Assert.assertEquals(message, textError);
     }
 
+    //Ainda não tem cenário
     public void acessarTelaCadastro() {
         getDriver().findElement(botaoAcessarCadastro).click();
-    }
-
-    public  void scrollDown(){
-        JavascriptExecutor jse = (JavascriptExecutor) getDriver();
-        jse.executeScript("window.scrollTo(0, 10000)");
     }
 
 }

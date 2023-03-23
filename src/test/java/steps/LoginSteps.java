@@ -5,6 +5,7 @@ import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import pages.CommonPage;
 import pages.LoginPage;
 import runner.RunCucumber;
 import org.openqa.selenium.JavascriptExecutor;
@@ -14,18 +15,19 @@ import static java.lang.Thread.sleep;
 public class LoginSteps extends RunCucumber {
 
     LoginPage loginPage = new LoginPage();
+    CommonPage commonPage = new CommonPage();
 
     @Dado("^que estou na tela de login$")
-    public void que_estou_na_tela_de_login(){
+    public void que_estou_na_tela_de_login() {
         loginPage.acessarAplicao();
         loginPage.acessarTelaLogin();
     }
 
     @Quando("^preencho login \"([^\"]*)\" e senha \"([^\"]*)\"$")
-    public void preencho_login_e_senha(String email, String senha){
+    public void preencho_login_e_senha(String email, String senha) {
         loginPage.preencheEmail(email);
         loginPage.preencherSenha(senha);
-        loginPage.scrollDown();
+        commonPage.scrollDown();
         getDriver().findElement(By.id("btnLogin")).sendKeys(Keys.TAB);
     }
 
@@ -39,6 +41,7 @@ public class LoginSteps extends RunCucumber {
         loginPage.verificaLoginSucesso();
     }
 
+    //Cenário 2
     @Então("^vejo mensagem \"([^\"]*)\" de campo não preenchido$")
     public void vejo_mensagem_de_campo_não_preenchido(String message) {
         loginPage.verificaCampoVazio(message);
