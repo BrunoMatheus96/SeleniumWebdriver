@@ -11,5 +11,4 @@ public class Commands extends RunCucumber {
         WebDriverWait wait = new WebDriverWait(getDriver(), tempo);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-
 }
