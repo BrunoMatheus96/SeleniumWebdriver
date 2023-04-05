@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import runner.RunCucumber;
 
+import static support.Commands.*;
+
 public class LoginPage extends RunCucumber {
 
     // elementos
@@ -21,34 +23,42 @@ public class LoginPage extends RunCucumber {
     }
 
     public void acessarTelaLogin() {
-        getDriver().findElement(botaoAcessarLogin).click();
+        //getDriver().findElement(botaoAcessarLogin).click();
+        clickElement(botaoAcessarLogin);
     }
 
     public void preencheEmail(String email) {
-        getDriver().findElement(campoEmail).sendKeys(email);
+        //getDriver().findElement(campoEmail).sendKeys(email);
+        fillField(campoEmail, email);
     }
 
     public void preencherSenha(String senha) {
-        getDriver().findElement(campoSenha).sendKeys(senha);
+        //getDriver().findElement(campoSenha).sendKeys(senha);
+        fillField(campoSenha, senha);
     }
 
     public void clicarLogin() {
-        getDriver().findElement(botaoFazerLogin).click();
+        //getDriver().findElement(botaoFazerLogin).click();
+        clickElement(botaoFazerLogin);
     }
 
     public void verificaLoginSucesso() {
-        String textoLoginSucesso = getDriver().findElement(By.id("swal2-title")).getText();
-        Assert.assertEquals("Login realizado", textoLoginSucesso);
+        //waitElementBeVisible(By.id("swal2-title"), 5000);
+        //String textoLoginSucesso = getDriver().findElement(By.id("swal2-title")).getText();
+        //Assert.assertEquals("Login realizado", textoLoginSucesso);
+        checkMessage(By.id("swal2-title"), "Login realizado");
     }
 
     public void verificaCampoVazio(String message) {
-        String textError = getDriver().findElement(By.className("invalid_input")).getText();
-        Assert.assertEquals(message, textError);
+        //String textError = getDriver().findElement(By.className("invalid_input")).getText();
+        //Assert.assertEquals(message, textError);
+        checkMessage(By.className("invalid_input"), message);
     }
 
     //Ainda não tem cenário
     public void acessarTelaCadastro() {
-        getDriver().findElement(botaoAcessarCadastro).click();
+        //getDriver().findElement(botaoAcessarCadastro).click();
+        clickElement(botaoAcessarCadastro);
     }
 
 }
