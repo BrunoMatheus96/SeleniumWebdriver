@@ -1,5 +1,7 @@
 package steps;
 
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -8,11 +10,15 @@ import org.openqa.selenium.Keys;
 import pages.CommonPage;
 import pages.LoginPage;
 import runner.RunCucumber;
-import org.openqa.selenium.JavascriptExecutor;
+import support.ScreenshotUtils;
 
 import static java.lang.Thread.sleep;
 
 public class LoginSteps extends RunCucumber {
+    @After
+    public static void afterScenario(Scenario scenario) {
+        ScreenshotUtils.addScreenshotOnScenario(scenario);
+    }
 
     LoginPage loginPage = new LoginPage();
     CommonPage commonPage = new CommonPage();

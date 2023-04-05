@@ -1,8 +1,6 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import runner.RunCucumber;
 
 import static support.Commands.*;
@@ -46,7 +44,7 @@ public class LoginPage extends RunCucumber {
         //waitElementBeVisible(By.id("swal2-title"), 5000);
         //String textoLoginSucesso = getDriver().findElement(By.id("swal2-title")).getText();
         //Assert.assertEquals("Login realizado", textoLoginSucesso);
-        checkMessage(By.id("swal2-title"), "Login realizado");
+        checkMessage(By.id("swal2-title"), "Login realizadoX");
     }
 
     public void verificaCampoVazio(String message) {
@@ -60,5 +58,4 @@ public class LoginPage extends RunCucumber {
         //getDriver().findElement(botaoAcessarCadastro).click();
         clickElement(botaoAcessarCadastro);
     }
-
 }
