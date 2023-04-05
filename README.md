@@ -1,7 +1,7 @@
 # SeleniumWebdriver
 - Para geração de relatório é preciso usar dois comandos no terminal
-  - O primeiro é " mvn test -Dtest=**/*RunCucumber -Dbrowser=chrome" responsável por rodar todos os testes
-  - O segundo é o "mvn cluecumber-report:reporting" que será responsável por gerar o relatório de fato
+  - O primeiro é ```mvn test -Dtest=**/*RunCucumber -Dbrowser=chrome``` responsável por rodar todos os testes
+  - O segundo é o ```mvn cluecumber-report:reporting``` que será responsável por gerar o relatório de fato
 
 
  - A pasta "pages" será um "common" onde podemos criar uma classe que os códios serão usados em vários cenários,
