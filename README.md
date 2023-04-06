@@ -1,10 +1,11 @@
 # SeleniumWebdriver
+<h1 align="center"> Instruções e orientações sobre automação WEB<h4 align="center"> 
+
+- Para baixar as dependências e compilar o projeto basta utilizar o comando ```mvn clean install```
+
 - Para geração de relatório é preciso usar dois comandos no terminal:
   - O primeiro é ```mvn test -Dtest=**/*RunCucumber -Dbrowser=chrome``` responsável por rodar todos os testes
   - O segundo é o ```mvn cluecumber-report:reporting``` que será responsável por gerar o relatório de fato
-
-
-- Para baixar as dependências e compilar o projeto basta utilizar o comando ```mvn clean install```
 
 
 - O diretório ```common``` é utilizado para armazenar classes com funcionalidades comuns que são usadas em diversas partes do projeto, como por exemplo, classes que implementam funções para manipulação de strings, datas, formatação de dados, entre outras.
