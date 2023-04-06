@@ -1,4 +1,5 @@
-# <h1 align="center"> Instruções e orientações sobre automação WEB<h4 align="center"> 
+# SeleniumWebdriver
+# <h1 align="center"> Instruções e orientações sobre automação WEB em JAVA<h4 align="center"> 
 
 - Para baixar as dependências e compilar o projeto basta utilizar o comando ```mvn clean install```
 
