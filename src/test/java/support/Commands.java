@@ -56,7 +56,7 @@ public class Commands extends RunCucumber {
         waitElementBeVisible(element, 10000);
         actualMessage = getDriver().findElement(element).getText();
         //Quando não der certo, vai quebrar o teste!!!
-        Assert.assertEquals("Erro ao validar as mensagens",expectedMessage, actualMessage);
+        Assert.assertEquals("Erro ao validar as mensagens", actualMessage, expectedMessage);
         //Quando não der certo, vai quebrar o teste!!!
         System.out.println("Validou a mensagem " + expectedMessage);
         System.out.println("##############################################");
