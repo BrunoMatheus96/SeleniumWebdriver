@@ -44,7 +44,7 @@ public class LoginPage extends RunCucumber {
         //waitElementBeVisible(By.id("swal2-title"), 5000);
         //String textoLoginSucesso = getDriver().findElement(By.id("swal2-title")).getText();
         //Assert.assertEquals("Login realizado", textoLoginSucesso);
-        checkMessage(By.id("swal2-title"), "Login realizadoX");
+        checkMessage(By.id("swal2-title"), "Login realizado");
     }
 
     public void verificaCampoVazio(String message) {
