@@ -20,7 +20,7 @@ jobs:
             cache: 'maven'
 
       - name: Instalar Chrome
-        run: browser-actions/setup-chrome@latest
+        run: browser-actions/setup-chrome@v1
 
       - name: Instalar o Chrome Driver
         uses: nanasess/setup-chromedriver@v1
