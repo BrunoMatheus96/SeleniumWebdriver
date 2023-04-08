@@ -12,7 +12,6 @@ import pages.LoginPage;
 import runner.RunCucumber;
 import support.ScreenshotUtils;
 
-import static java.lang.Thread.sleep;
 
 public class LoginSteps extends RunCucumber {
     @After

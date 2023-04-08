@@ -1,8 +1,9 @@
 package runner;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -11,13 +12,15 @@ public class RunBase {
 
     static WebDriver driver;
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         return driver;
     }
 
     public static WebDriver getDriver(String browser) {
 
-        if (driver !=  null) {
+        ChromeOptions chromeOptions = new ChromeOptions();
+
+        if (driver != null) {
             driver.quit();
         }
 
@@ -25,6 +28,10 @@ public class RunBase {
             case "chrome":
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
+                break;
+            case "chrome-ci":
+                chromeOptions.addArguments("--headless");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
                 driver = new FirefoxDriver();
@@ -34,8 +41,7 @@ public class RunBase {
             default:
                 throw new IllegalArgumentException("Navegador não encontrado! Passe um navegador existente: chrome, forefox ou edge.");
         }
-
-        if(driver != null){
+        if (driver != null) {
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
 
