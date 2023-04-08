@@ -25,7 +25,7 @@ jobs:
         run: browser-actions/setup-chrome@latest
 #4 - Instalar o chrome driver
       - nome: Instalar o Chrome Driver
-        uses: nanasess/setup-chromedriver@v1
+        uses: nanasess/setup-chromedriver@v2
       - run:
           export DISPLAY=:99
           chromedriver --url-base=/wd/hub &
