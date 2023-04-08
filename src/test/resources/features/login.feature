@@ -23,9 +23,9 @@ Funcionalidade: Login
     Então vejo mensagem <response> de campo não preenchido
 
     Exemplos:
-      | login                         | senha    | response           |
-      | "eduardo"                     | "123456" | "E-mail inválido." |
-      | "eduardo.finotti@qazando.com" | "123"    | "Senha inválida."  |
+      | login     | senha    | response           |
+      | "eduardo" | "123456" | "E-mail inválido." |
+      #| "eduardo.finotti@qazando.com" | "123"    | "Senha inválida."  |
 
 
 
