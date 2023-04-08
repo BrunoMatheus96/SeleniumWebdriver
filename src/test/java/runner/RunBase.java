@@ -12,7 +12,7 @@ public class RunBase {
 
     static WebDriver driver;
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         return driver;
     }
 
@@ -20,18 +20,17 @@ public class RunBase {
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
-        if (driver !=  null) {
+        if (driver != null) {
             driver.quit();
         }
 
         switch (browser) {
-
             case "chrome":
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
                 break;
             case "chrome-ci":
-                chromeOptions.addArguments("--headless", "--remote-allow-origins=*");
+                chromeOptions.addArguments("--headless");
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
@@ -42,7 +41,7 @@ public class RunBase {
             default:
                 throw new IllegalArgumentException("Navegador não encontrado! Passe um navegador existente: chrome, forefox ou edge.");
         }
-        if(driver != null){
+        if (driver != null) {
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
 
