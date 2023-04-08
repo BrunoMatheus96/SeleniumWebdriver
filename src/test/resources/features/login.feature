@@ -25,7 +25,7 @@ Funcionalidade: Login
     Exemplos:
       | login     | senha    | response           |
       | "eduardo" | "123456" | "E-mail inválido." |
-      #| "eduardo.finotti@qazando.com" | "123"    | "Senha inválida."  |
+      | "eduardo.finotti@qazando.com" | "123"    | "Senha inválida."  |
 
 
 
