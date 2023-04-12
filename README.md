@@ -1,9 +1,5 @@
 # zap-automation-test-web
 
-<h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
-</h4>
-
 <h2> Informações para quem não tem a IDE Intellij no computador </h2>
 Projeto de automação de testes Web, utilizando o framework Selenium.
 
